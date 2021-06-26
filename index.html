@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark menu-bar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#poke"><b>POKEDEX</b>engine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon " style="background-color:red;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-sm-auto  ">
+          <li class="nav-item ">
+            <a class="nav-link active text-dark " aria-current="page" href="#search"><b>Search</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="#surprise"><b>Random
+              </b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="#List"><b>Poke List</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- awal menu search -->
+  <section id="search">
+    <div class="container  pt-5">
+      <div class="jumbotron bg-dark mt-3  ">
+        <div class="row  " align='center'>
+          <div class="col col-bg">
+            <h5 class=" text-center mb-4 name-bg"><b>Insert Pokemon Name</b></h5>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="pokename"
+                placeholder="cari pokemon................(dengan huruf kecil)" aria-describedby="basic-addon1">
+            </div>
+            <button type="button" class="btn btn-dark align-middle mt-2 button-go1 " id="Go!"><b>Search!</b></button>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col" align='center' id="top1">
+          <div class="pokemon" style="width: 18rem;" align='center'>
+            <img id="gambar" width="250" height="250" class="rounded mx-auto d-block" align='center' alt=" ">
+            <p id="evol2" class="p-3 mt-2 mb-2  text-dark "> </p>
+            <p id="evol1" class="p-1 mt-1 mb-1  text-dark "></p>
+            <p id="evol3" class="p-3 mt-2 mb-2  text-dark "> </p>
+            <p class="card-text" id="anime"></p>
+            <!-- Button trigger modal -->
+            <button type="button" id="more" class="btn btn-dark  " data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              More</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
+                  </div>
+                  <div class="modal-body" align='center'>
+                    <form>
+                      <div>
+                        <div class="pokemon" style="width: 18rem;">
+                          <img id="pgambar1" width="250" height="250" class="rounded mx-auto d-block" align='center'
+                            alt=" ">
+                          <p id="iname1" class="mt-2 text-dark"></p>
+                          <p id="pname1" class=" text-dark "></p>
+                          <p id="tname1" class="mt-2 text-dark"></p>
+                          <p id="mname1" class="text-info"></p>
+                          <p id="hname1" class=" text-dark"></p>
+                          <p id="wname1" class=" text-dark"></p>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- akhir menu search -->
+  <!-- awal menu random pokemen-->
+  <section id="surprise">
+    <div class="jumbotron jumbotron-bg bg-dark mb-5 bg-gradient ">
+      <div class="container ">
+        <div class="row mb-5" align='center'>
+          <div class="col ">
+            <button type="button" class="btn btn-dark mt-4 mb-2 button-bg" onclick="myFunction()"><b>Surprise
+                Me!</b></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col ">
+            <div class="pokemon " style="width: 18rem;">
+              <img id="gran1" src="..." width="250" height="250" class="rounded mx-auto d-block" align='center' alt=" ">
+              <p id="iran1" class="  mt-4 text-dark" align='center'> </p>
+              <p id="nran1" class="  text-dark " align='center'></p>
+              <p id="tran1" class="  text-dark" align='center'> </p>
+              <p class="card-text" id="anime"></p>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="pokemon " style="width: 18rem;">
+              <h5 class="card-title"></h5>
+              <img id="gran2" src="..." width="250" height="250" class="rounded mx-auto d-block" align='center' alt=" ">
+              <p id="iran2" class="  mt-4 text-dark" align='center'> </p>
+              <p id="nran2" class=" text-dark " align='center'></p>
+              <p id="tran2" class=" text-dark" align='center'> </p>
+
+              <p class="card-text" id="anime"></p>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="pokemon" style="width: 18rem;">
+              <h5 class="card-title"></h5>
+              <img id="gran3" src="..." width="250" height="250" class="rounded mx-auto d-block" align='center' alt=" ">
+              <p id="iran3" class=" mt-4  text-dark" align='center'> </p>
+              <p id="nran3" class="  text-dark " align='center'></p>
+              <p id="tran3" class="  text-dark" align='center'> </p>
+
+              <p class="card-text" id="anime"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!--awal pokemon list-->
+  <section id="List">
+    <div class="jumbotron jumbo-bg  mt-5 bg-light text-dark mb-5 ">
+      <div class="container ">
+        <div class="row text-center">
+          <div class="col">
+            <div>
+              <h1 id="top20" class="h1-bg" poke-container> Top-20 Pokemon List
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center mt-5">
+          <div id="poke_container" class="poke-container"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+
+<!--akhir pokemon list-->
+<!--awal script-->
+<script>
+  var xButton = document.getElementById("Go!");
+  xButton.addEventListener('click', searchid);
+
+  function searchid() {
+    fetch('https://pokeapi.co/api/v2/pokemon/' + document.getElementById('pokename').value)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        document.getElementById('gambar').src = data.sprites.other.dream_world.front_default;
+        document.getElementById('evol1').innerHTML = `<h1>  ${data.name[0].toUpperCase() + data.name.slice(1)}</h1>`;
+        document.getElementById('evol2').innerHTML = `<b><h2><span class="number">#${data.id
+							.toString()
+							.padStart(3, '0')}</span></h2></b> `;
+      })
+  };
+</script>
+<script>
+  var xButton = document.getElementById("more");
+  xButton.addEventListener('click', searchid);
+
+  function searchid() {
+    fetch('https://pokeapi.co/api/v2/pokemon/' + document.getElementById('pokename').value)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        document.getElementById('pgambar1').src = data.sprites.other.dream_world.front_default;
+        document.getElementById('pname1').innerHTML = `<h1>  ${data.name[0].toUpperCase() + data.name.slice(1)}</h1>`;
+        document.getElementById('iname1').innerHTML = `<b><h2><span class="number">#${data.id
+							.toString()
+							.padStart(3, '0')}</span> <h2></b>`;
+        document.getElementById('mname1').innerHTML =
+          `<p style="text-align:middle;" ><b><span class="text-dark">S.Move:</b> </span><b>${data.moves[0].move.name.toUpperCase()}</b></p>`;
+        document.getElementById('tname1').innerHTML =
+          `<p style="text-align:middle;" ><b>${data.types[0].type.name[0].toUpperCase() + data.types[0].type.name.slice(1) }</b></p>`;
+        document.getElementById('wname1').innerHTML =
+          `<p style="text-align:left;" ><b>Weight : </b>${data.weight} Oz</p>`;
+        document.getElementById('hname1').innerHTML =
+          `<p style="text-align:left;" ><b>Height : </b>${data.height}"</p>`;
+
+      })
+  };
+</script>
+<script>
+  let arrpokemon = ['Bulbasaur', 'Ivysaur', 'Venusaur', 'Charmander', 'Charmeleon', 'Charizard', 'Squirtle',
+    'Wartortle', 'Blastoise', 'Gligar', 'Caterpie', 'Metapod', 'Butterfree', 'Weedle', 'Kakuna', 'Beedrill', 'Pidgey',
+    'Pidgeotto', 'Pidgeot', 'Rattata', 'Raticate', 'Spearow', 'Dialga', 'Palkia', 'Heatran', 'Giratina', 'Cresella',
+    'Fearow', 'Ekans', 'Arbok', 'Pikachu', 'Raichu', 'Sandshrew', 'Sandslash', 'Nidoran', 'Nidorina', 'Nidoqueen',
+    'Nidorino', 'Nidoking', 'Clefairy', 'Clefable', 'Vulpix', 'Ninetales', 'Jigglypuff', 'Wigglytuff', 'Zubat',
+    'Golbat', 'Oddish', 'Gloom', 'Vileplume', 'Paras', 'Parasect', 'Venonat', 'Venomoth', 'Diglett', 'Dugtrio',
+    'Meowth', 'Persian', 'Psyduck', 'Golduck', 'Mankey', 'Primeape', 'Growlithe', 'Arcanine', 'Poliwag', 'Poliwhirl',
+    'Poliwrath', 'Abra', 'Kadabra', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Bellsprout', 'Weepinbell',
+    'Victreebel', 'Tentacool', 'Tentacruel', 'Geodude', 'Graveler', 'Golem', 'Ponyta', 'Rapidash', 'Slowpoke',
+    'Slowbro', 'Magnemite', 'Magneton', 'Farfetch’d', 'Doduo', 'Dodrio', 'Seel', 'Dewgong', 'Grimer', 'Muk',
+    'Shellder', 'Cloyster', 'Gastly', 'Haunter', 'Gengar', 'Onix', 'Drowzee', 'Hypno', 'Krabby', 'Kingler', 'Voltorb',
+    'Electrode', 'Exeggcute', 'Exeggutor', 'Cubone', 'Marowak', 'Hitmonlee', 'Hitmonchan', 'Lickitung', 'Koffing',
+    'Weezing', 'Rhyhorn', 'Rhydon', 'Chansey', 'Tangela', 'Kangaskhan', 'Horsea', 'Seadra', 'Goldeen', 'Seaking',
+    'Staryu', 'Starmie', 'Mr.Mime', 'Scyther', 'Jynx', 'Electabuzz', 'Magmar', 'Pinsir', 'Tauros', 'Magikarp',
+    'Gyarados', 'Lapras', 'Ditto', 'Eevee', 'Vaporeon', 'Jolteon', 'Flareon', 'Porygon', 'Omanyte', 'Omastar',
+    'Kabuto', 'Kabutops', 'Aerodactyl', 'Snorlax', 'Articuno', 'Zapdos', 'Moltres', 'Dratini', '1air', 'Dragonite',
+    'Phione', 'Manaphy', 'Mewtwo', 'Mew'
+  ]
+
+  function myFunction() {
+    const boolpokemon = [];
+    for (let i = 0; i < arrpokemon.length; i++) {
+      boolpokemon.push(false);
+    }
+
+    for (let i = 1; i < 4; i++) {
+      let rand = Math.floor(Math.random() * arrpokemon.length);
+      while (boolpokemon[rand]) {
+        rand = Math.floor(Math.random() * arrpokemon.length);
+      }
+      let pokemonName = arrpokemon[rand];
+      pokemonName = pokemonName.toLowerCase()
+
+      fetch("https://pokeapi.co/api/v2/pokemon/" + pokemonName)
+        .then((response) => response.json())
+        .then(data => {
+          console.log(data)
+          document.getElementById('gambar').src = data.sprites.other.dream_world.front_default;
+          document.getElementById('evol1').innerHTML =
+          `<h1>  ${data.name[0].toUpperCase() + data.name.slice(1)}</h1>`;
+          document.getElementById('evol2').innerHTML = `<b><h2><span class="number">#${data.id
+							.toString()
+							.padStart(3, '0')}</span></h2></b> `;
+          document.getElementById('evol3').innerHTML =
+            `<p style="text-align:middle;" ><b>${data.types[0].type.name[0].toUpperCase() + data.types[0].type.name.slice(1) }</b></p>`;
+          document.getElementById(`gran${i}`).src = data.sprites.other.dream_world.front_default;
+          document.getElementById(`nran${i}`).innerHTML =
+            `<h1>  ${data.name[0].toUpperCase() + data.name.slice(1)}</h1>`;
+          document.getElementById(`iran${i}`).innerHTML = `<b><h2><span class="number">#${data.id
+							.toString()
+							.padStart(3, '0')}</span> <h2></b>`;
+          document.getElementById(`tran${i}`).innerHTML =
+            `<p style="text-align:middle;" ><b>${data.types[0].type.name[0].toUpperCase() + data.types[0].type.name.slice(1) }</b></p>`;
+          document.getElementById('pgambar1').src = data.sprites.other.dream_world.front_default;
+          document.getElementById('pname1').innerHTML =
+            `<h1>  ${data.name[0].toUpperCase() + data.name.slice(1)}</h1>`;
+          document.getElementById('iname1').innerHTML = `<b><h2><span class="number">#${data.id
+							.toString()
+							.padStart(3, '0')}</span> <h2></b>`;
+          document.getElementById('mname1').innerHTML =
+            `<p style="text-align:middle;" ><b><span class="text-dark">S.Move:</b> </span><b>${data.moves[0].move.name.toUpperCase()}</b></p>`;
+          document.getElementById('tname1').innerHTML =
+            `<p style="text-align:middle;" ><b>${data.types[0].type.name[0].toUpperCase() + data.types[0].type.name.slice(1) }</b></p>`;
+          document.getElementById('wname1').innerHTML =
+            `<p style="text-align:left;" ><b>Weight : </b>${data.weight} Oz</p>`;
+          document.getElementById('hname1').innerHTML =
+            `<p style="text-align:left;" ><b>Height : </b>${data.height}"</p>`;
+        });
+    }
+  }
+  window.onload = myFunction()
+</script>
+<script>
+  const poke_container = document.getElementById('poke_container');
+  const pokemons_number = 20;
+  const colors = {
+    fire: '#FDDFDF',
+    grass: '#DEFDE0',
+    electric: '#FCF7DE',
+    water: '#DEF3FD',
+    ground: '#f4e7da',
+    rock: '#d5d5d4',
+    fairy: '#fceaff',
+    poison: '#98d7a5',
+    bug: '#f8d5a3',
+    dragon: '#97b3e6',
+    psychic: '#eaeda1',
+    flying: '#F5F5F5',
+    fighting: '#E6E0D4',
+    normal: '#F5F5F5'
+  };
+  const main_types = Object.keys(colors);
+
+  const fetchPokemons = async () => {
+    for (let i = 1; i <= pokemons_number; i++) {
+      await getPokemon(i);
+    }
+  };
+
+  const getPokemon = async id => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const res = await fetch(url);
+    const pokemon = await res.json();
+    createPokemonCard(pokemon);
+  };
+
+  function createPokemonCard(pokemon) {
+    const pokemonEl = document.createElement('div');
+    pokemonEl.classList.add('pokemon');
+
+    const poke_types = pokemon.types.map(z => z.type.name);
+    const type = main_types.find(z => poke_types.indexOf(z) > -1);
+    const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+    const color = colors[type];
+
+    pokemonEl.style.backgroundColor = color;
+
+
+    const pokeInnerHTML = `
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}
+						.png" alt="${name}" />
+        </div>
+        <div class="info">
+            <span class="number">#${pokemon.id
+							.toString()
+							.padStart(3, '0')}</span>
+            <h3 class="name">${name}</h3>
+            <small class="type"><b><span>${type}</span></b></small>
+        </div>
+    `;
+
+    pokemonEl.innerHTML = pokeInnerHTML;
+
+    poke_container.appendChild(pokemonEl);
+  }
+
+  fetchPokemons();
+</script>
+
+<!-- akhir script-->
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+
+</html>
+© 2021 GitHub, Inc.
